@@ -7,6 +7,7 @@ import Teachers from './pages/Teachers'
 import Gallery from './pages/GalleryPage'
 import Blog from './pages/Blog'
 import HeroSection from './pages/HeroSection'
+import Registrstion from './pages/Registrstion'
 
 function App() {
   return (
@@ -16,8 +17,9 @@ function App() {
     // <Link/>
     // <Teachers/> 
     // <Gallery/>
-    <Blog/>
+    // <Blog/>
     // <HeroSection/>
+    <Registrstion/>
   )
 }
 

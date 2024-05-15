@@ -1,7 +1,7 @@
 import React,{useRef} from 'react'
 import galleryData from './Datas/GalleryData'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBackward, faForward } from '@fortawesome/free-solid-svg-icons';
+import { faLessThan, faGreaterThan } from '@fortawesome/free-solid-svg-icons';
 
 function GallerySlider() {
     const scrollRef = useRef(null)
@@ -23,8 +23,8 @@ function GallerySlider() {
                 }
             </div>
             <div className=" mx-auto w-[100px] flex justify-between mt-8 mb-20 ">
-                <button onClick={() => handleScroll(-330)}><FontAwesomeIcon icon={faBackward} size='2x '/></button>
-                <button onClick={() => handleScroll(330)}><FontAwesomeIcon icon={faForward} size='2x'/></button>
+                <button onClick={() => handleScroll(-330)} className='bg-slate-300 p-2 rounded-[100%]'><FontAwesomeIcon icon={faLessThan} size='x '/></button>
+                <button onClick={() => handleScroll(330)} className='bg-slate-300 p-2 rounded-[100%]'><FontAwesomeIcon icon={faGreaterThan} size='x'/></button>
             </div>
     </>
   )

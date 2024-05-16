@@ -1,4 +1,7 @@
 
 #header{
     background-image: url('/public/image\ 18.png') ;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
+

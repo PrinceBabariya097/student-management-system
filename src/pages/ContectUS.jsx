@@ -13,16 +13,16 @@ function ContectUS() {
         <>
             <CustomHeader title={title} subTitle={subTitle} />
             <div className='flex  flex-col justify-center items-center'>
-                <div className=' h-[536px] w-[812px] mt-20'>
+                <div className=' h-[536px] w-[812px] md:w-[700px] max-[426px]:w-[400px] mt-20'>
                     <form>
-                        <div className='flex justify-between py-3'>
-                            <div>
+                        <div className='md:flex justify-between py-3'>
+                            <div className='max-[426px]:mb-3'>
                                 <label htmlFor='name' className='text-[#75818A] text-sm pb-1'>Name</label>
-                                <input id='name' type="text" className=' h-[56px] w-[394px] bg-[#F6F7F9] ' placeholder='Enter Your FullName' />
+                                <input id='name' type="text" className=' h-[56px] w-[394px] md:w-[330px] bg-[#F6F7F9] ' placeholder='Enter Your FullName' />
                             </div>
                             <div>
                                 <label htmlFor='email' className='text-[#75818A] text-sm pb-1'>Email</label>
-                                <input id='email' type="email" className=' h-[56px] w-[394px] bg-[#F6F7F9] ' placeholder='Enter Your Email' />
+                                <input id='email' type="email" className=' h-[56px] w-[394px] md:w-[330px] bg-[#F6F7F9] ' placeholder='Enter Your Email' />
                             </div>
                         </div>
                         <div className='py-3'>
@@ -41,24 +41,24 @@ function ContectUS() {
                     </form>
                 </div>
                 <div className='py-32'>
-                    <div className='relative'>
-                    <img src={map} alt="" className=' shadow-sm  '></img>
-                    <div className=' w-[200px] h-[240px] bg-white absolute top-40 left-10 flex justify-center flex-col p-3'>
-                        <div className=''>
-                        <img src={review} alt="" />
-                        </div>
-                        <p className='py-2 text-xs font-bold'>SMP Negeri 1 Cibadak</p>
-                        <p className='py-2 text-[10px] text-left text-[#919FAE]'>Jl. Siliwangi No 123, Cibadak, Cibadak, Sukabumi, Jawa Barat 43351, Indonesia, (0266)531333</p>
-                        <div className='flex items-center'>
-                            <p className='mr-2 text-[10px]'>4.6</p>
-                            <FontAwesomeIcon icon={faStar} color="yellow" size="xs"/>
-                            <FontAwesomeIcon icon={faStar} color="yellow" size="xs"/>
-                            <FontAwesomeIcon icon={faStar} color="yellow" size="xs"/>
-                            <FontAwesomeIcon icon={faStar} color="yellow" size="xs"/>
-                            <FontAwesomeIcon icon={faStar} color="yellow" size="xs"/>                            
+                    <div className='md:relative'>
+                        <img src={map} alt="" className=' shadow-sm  '></img>
+                        <div className=' w-[200px] h-[240px] md:w-[150px] md:h-[190px] max-[426px]:mx-auto md:top-10 bg-white md:absolute top-40 left-10 flex justify-center flex-col p-3'>
+                            <div className=''>
+                                <img src={review} alt="" />
+                            </div>
+                            <p className='py-1 text-xs font-bold'>SMP Negeri 1 Cibadak</p>
+                            <p className='py-1 text-[10px] text-left text-[#919FAE]'>Jl. Siliwangi No 123, Cibadak, Cibadak, Sukabumi, Jawa Barat 43351, Indonesia, (0266)531333</p>
+                            <div className='flex items-center'>
+                                <p className='mr-2 text-[10px]'>4.6</p>
+                                <FontAwesomeIcon icon={faStar} color="yellow" size="xs" />
+                                <FontAwesomeIcon icon={faStar} color="yellow" size="xs" />
+                                <FontAwesomeIcon icon={faStar} color="yellow" size="xs" />
+                                <FontAwesomeIcon icon={faStar} color="yellow" size="xs" />
+                                <FontAwesomeIcon icon={faStar} color="yellow" size="xs" />
+                            </div>
                         </div>
                     </div>
-                </div>
                 </div>
             </div>
             <Footer />

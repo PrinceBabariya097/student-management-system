@@ -12,25 +12,37 @@ import f3 from '/f3.jpg'
 import f4 from '/f4.jpeg'
 import f6 from '/f6.webp'
 import f7 from '/f7.webp'
+import { useEffect, useState } from "react";
 
 
 function ImageSlider() {
+  const [slides, setSlides] = useState(4)
+ 
+  useEffect(() => {
+    if (window.innerWidth <= 426) {
+      setSlides(1)
+    }else if(window.innerWidth <= 769){
+      setSlides(2)
+    }
+    
+  },[window.innerWidth])
+
   const settings = {
     dots: false,
     infinite: true,
     speed: 500,
-    slidesToShow: 4,
+    slidesToShow: slides,
     slidesToScroll: 1
   };
   return (
     <>
     
-    <div className='w-3/4 m-auto '>
+    <div className='max-[426px]:w-[70%] w-3/4 mx-auto '>
       <div className="content-center py-5 text-white">
       <Slider {...settings}>
         {data.map((d) => (
           <div key={d.name} className="text-center">
-            <img src={d.img} alt="" className=" w-[255px] h-[253px] " />
+            <img src={d.img} alt="" className=" w-[255px] h-[253px] mx-auto " />
             <p className='py-3'>{d.name}</p>
           </div>
         ))}

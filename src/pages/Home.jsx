@@ -13,18 +13,18 @@ function Home() {
   return (
     <>
       <Header />
-      <div className='flex my-20 px-56 '>
-        <div className='mr-14'>
-          <img src={videoImage} className=' h-[325.71px] w-[439.71px] ' alt="" />
+      <div className='flex max-[426px]:flex-col my-20 mx-auto  w-fit '>
+        <div className='sm:mr-14 max-[426px]:mx-auto'>
+          <img src={videoImage} className=' h-[325.71px] w-[400px] ' alt="" />
         </div>
-        <div className='flex flex-col justify-around'>
-          <p className='font-bold text-3xl w-[397px]'>Sambutan Kepala Sekolah SMP Negeri 1 Cibadak</p>
-          <p className='text-sm w-[585px]'>Puji dan syukur mari kita panjatkan kehadirat Allah SWT. Yang senantiasa dengan sifat kasih dan sayangnya banyak memberikan nikmat ...</p>
+        <div className='flex flex-col justify-around w-full'>
+          <p className='font-bold md:text-lg lg:text-3xl w-[397px] my-3'>Sambutan Kepala Sekolah SMP Negeri 1 Cibadak</p>
+          <p className='text-sm lg:w-[585px] md:w-fit text-wrap my-3'>Puji dan syukur mari kita panjatkan kehadirat Allah SWT. Yang senantiasa dengan sifat kasih dan sayangnya banyak memberikan nikmat ...</p>
           <button className='bg-[#0193DC] rounded py-2 w-[184px]'>Lebih Lanjut</button>
         </div>
       </div>
       <div className='w-full flex justify-center'>
-        <p className='font-bold text-2xl'>Blogs</p>
+        <p className='font-bold text-2xl mb-3'>Blogs</p>
       </div>
       <div>
         <Cards />

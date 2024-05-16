@@ -4,7 +4,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBackward, faForward } from '@fortawesome/free-solid-svg-icons';
+import { faLessThan, faGreaterThan } from '@fortawesome/free-solid-svg-icons';
 
 function TeacherSlider() {
 
@@ -17,10 +17,10 @@ function TeacherSlider() {
 
     return (
         <>
-            <div className='flex flex-col flex-wrap h-[1365px] overflow-auto [transition:all_transform_0.3s_ease] ' ref={scrollRef}>
+            <div className='flex flex-col flex-wrap h-[1365px] overflow-scroll ' ref={scrollRef}>
                 {
                     TeachersData.map((data, index) => (
-                        <div key={data.id * 999} className=' h-[415px] w-[300px] shadow-lg m-5'>
+                        <div key={data.id * 999} className=' h-[415px] w-[300px] shadow-lg lg:m-5'>
                             <div className=' w-[144px] h-[177px] my-7 flex m-auto'>
                                 <img src={data.img} alt="Teachers Photo" />
                             </div>
@@ -34,8 +34,8 @@ function TeacherSlider() {
                 }
             </div>
             <div className=" mx-auto w-[100px] flex justify-between mt-8 mb-20 ">
-                <button onClick={() => handleScroll(-330)}><FontAwesomeIcon icon={faBackward} size='2x '/></button>
-                <button onClick={() => handleScroll(330)}><FontAwesomeIcon icon={faForward} size='2x'/></button>
+                <button onClick={() => handleScroll(-310)} className='bg-slate-300 p-2 rounded-[100%]'><FontAwesomeIcon icon={faLessThan}/></button>
+                <button onClick={() => handleScroll(310)} className='bg-slate-300 p-2 rounded-[100%]'><FontAwesomeIcon icon={faGreaterThan}/></button>
             </div>
         </>
     )

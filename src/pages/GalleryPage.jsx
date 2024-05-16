@@ -7,7 +7,7 @@ function Gallery() {
   return (
     <>
     <CustomHeader title={'Gallery'}/>
-    <div className=' w-[65.3%] mx-auto '>
+    <div className=' lg:w-[65.3%] md:w-[75%] max-[426px]:w-[70%] mx-auto '>
       <GallerySlider/>
     </div>
     <Footer/>
